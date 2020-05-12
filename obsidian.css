@@ -1,0 +1,238 @@
+/* colours! Overriding both themes */
+.theme-dark, .theme-light {
+    --accent-1: #FF00FF;
+    --accent-2: #00FFFF;
+    --accent-3: #00FF00;
+    --accent-4: #FFFF00;
+    --accent-5: #FF0000;
+    --accent-6: #0000FF;
+
+    --accent-1-muted: #ff79c6;
+    --accent-2-muted: #8be9fd;
+    --accent-3-muted: #50fa7b;
+    --accent-4-muted: #ffb86c;
+    --accent-5-muted: #ff5555;
+    --accent-6-muted: #bd93f9;
+
+    --background-primary: #2b213a;
+    --background-primary-alt: #171520;
+    --background-secondary: #1a1836;
+    --background-secondary-alt: #242043;
+
+    --text-accent: #FF1690;
+    --text-accent-hover: #7a6ae6;
+
+    --text-normal: var(--accent-1);
+    --text-muted: var(--accent-1-muted);
+    --text-faint: var(--accent-6-muted);
+
+    --interactive-normal: var(--accent-2);
+    --interactive-hover: var(--accent-2-muted);
+    --interactive-accent: var(--accent-2);
+    --interactive-accent-hover: var(--accent-2-muted);
+
+    --background-accent: #000;
+    --background-modifier-border: var(--accent-2);
+
+    --text-highlight-bg: #ffd319;
+    
+
+    /* obsidian dark defaults (overriding for light) */
+    --text-selection: rgba(0, 122, 255, 0.2);
+    --text-on-accent: rgba(255,255,255,0.8);
+    --interactive-accent-rgb: 72, 54, 153;
+    --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
+    --scrollbar-bg: rgba(255, 255, 255, 0.05);
+    --scrollbar-thumb-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* General UI */
+.side-dock-ribbon-tab, .side-dock-ribbon-action {
+    color: var(--accent-6-muted);
+}
+
+.workspace-leaf.mod-active .workspace-leaf-header-title
+{ color: var(--text-accent); }
+
+/* Editor and preview */
+.cm-s-obsidian, .markdown-preview-view {
+    --text-normal: rgba(255,220,255,0.8);
+    --text-faint: rgba(255,220,255,0.25);
+    --text-accent: var(--accent-2);
+    color: var(--text-normal);
+}
+.CodeMirror-guttermarker-subtle {
+    color: var(--accent-1);
+}
+
+/* headers */
+.cm-s-obsidian .cm-header, h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    overflow:visible;
+}
+.cm-s-obsidian .cm-formatting-header {
+    font-weight: 300;
+}
+.cm-header-1:not(.cm-formatting), h1 {
+    text-shadow: 0 0 0.5em var(--accent-1);
+}
+.cm-header-2:not(.cm-formatting), h2 {
+    text-shadow: 0 0 0.5em var(--accent-2);
+}
+.cm-header-3:not(.cm-formatting), h3 {
+    text-shadow: 0 0 0.5em var(--accent-3);
+}
+.cm-header-4:not(.cm-formatting), h4 {
+    text-shadow: 0 0 0.5em var(--accent-4);
+}
+.cm-header-5:not(.cm-formatting), h5 {
+    text-shadow: 0 0 0.5em var(--accent-5);
+}
+.cm-header-6:not(.cm-formatting), h6 {
+    text-shadow: 0 0 0.5em var(--accent-6);
+}
+
+/* formatting operators */
+.cm-s-obsidian .cm-formatting,
+.cm-s-obsidian span.cm-formatting-link,
+.cm-s-obsidian span.cm-formatting-link-string.cm-url,
+.cm-s-obsidian span.cm-inline-code.cm-formatting-code,
+.cm-s-obsidian span.cm-formatting-code,
+.cm-s-obsidian span.cm-formatting-quote,
+.cm-s-obsidian span.cm-hr {
+    color: var(--accent-2);
+}
+
+/* external links */
+.cm-s-obsidian .cm-formatting-link + .cm-formatting-link-string + .cm-url,
+.cm-s-obsidian .cm-string.cm-url,
+.cm-s-obsidian span.cm-link:not(.cm-formatting),
+.cm-s-obsidian span.cm-url,
+a {
+    color: var(--accent-1-muted);
+}
+
+/* internal links */
+.cm-s-obsidian span.cm-hashtag,
+.cm-s-obsidian span.cm-hmd-internal-link,
+a.internal-link,
+a.tag {
+    color: var(--accent-1);
+}
+
+/* code */
+.cm-s-obsidian span.cm-inline-code,
+code {
+    color: var(--accent-1);
+}
+pre code {
+    color: var(--text-normal);
+}
+
+
+
+
+.cm-strikethrough, s {
+    text-decoration-color: var(--accent-1);
+}
+
+
+.cm-s-obsidian span.cm-hmd-escape-backslash {
+    color: var(--text-faint);
+}
+.cm-s-obsidian span.cm-hmd-escape-char {
+    color: var(--text-normal);
+}
+
+
+
+
+
+
+
+/* bullets and numbering */
+
+.cm-s-obsidian span.cm-formatting-list,
+.cm-s-obsidian span.cm-formatting-task {
+    color: var(--text-accent); 
+}
+
+.cm-s-obsidian span.cm-formatting-list {
+    font-weight: bold;
+}
+
+/* bullet lists */
+ul {list-style: none}
+ul li:not(.task-list-item)::before {
+    content: "•"; /* 🤔 need to think of some better bullet chars */
+    color: var(--accent-2);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    padding:0;
+    font-weight: bold;
+    text-shadow: 0 0 0.5em var(--accent-2);
+}
+ul ul li:not(.task-list-item)::before {
+    content: "◦"
+}
+ul ul ul li:not(.task-list-item)::before {
+    content: "▪"
+}
+
+/* numbered lists */
+ol {list-style: none; counter-reset: li}
+ol > li {
+    counter-increment: li;
+}
+ol > li:not(.task-list-item)::before,
+ul ol > li:not(.task-list-item)::before,
+ul ul ol > li:not(.task-list-item)::before,
+ul ul ul ol > li:not(.task-list-item)::before {
+    content: "." counter(li);
+    color:  var(--accent-2);
+    font-weight:normal;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+    text-align: right;
+    direction: rtl;
+    word-wrap: none;
+    overflow: visible;
+    word-break: keep-all;
+    text-shadow: 0 0 0.5em var(--accent-2);
+}
+
+/* task lists! (I'm proud of this, but could use improvement) */
+.markdown-preview-view .task-list-item-checkbox {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    border: 1px solid  var(--accent-2);
+    position: relative;
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0;
+    box-shadow: 0 0 0.5em var(--accent-2);
+}
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+    content: '✓';
+    position: absolute;
+    color: var(--accent-2);
+    font-size:1em;
+    line-height: 1.25em;
+    width:1.2em;
+    text-align:center;
+    text-shadow: 0 0 0.5em var(--accent-2);
+}
+
+/* fixes for highlight */
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight,
+.markdown-preview-view mark,
+.search-result-file-matched-text {
+    color: var(--background-secondary);
+}
+.cm-s-obsidian span.cm-formatting-highlight {
+    color: var(--accent-2);
+}
