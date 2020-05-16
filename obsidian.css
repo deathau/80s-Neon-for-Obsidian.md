@@ -162,7 +162,13 @@ pre code {
 }
 
 /* bullet lists */
-ul {list-style: none}
+ul { list-style: none; }
+li > p {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 ul li:not(.task-list-item)::before {
     content: "•"; /* 🤔 need to think of some better bullet chars */
     color: var(--accent-2);
