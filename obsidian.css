@@ -39,7 +39,7 @@
 
     /* obsidian dark defaults (overriding for light) */
     --text-selection: rgba(0, 122, 255, 0.2);
-    --text-on-accent: rgba(255,255,255,0.8);
+    --text-on-accent: rgba(0,0,0,0.8);
     --interactive-accent-rgb: 72, 54, 153;
     --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.2);
     --scrollbar-bg: rgba(255, 255, 255, 0.05);
