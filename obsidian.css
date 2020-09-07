@@ -195,15 +195,14 @@ ol > li:not(.task-list-item)::before,
 ul ol > li:not(.task-list-item)::before,
 ul ul ol > li:not(.task-list-item)::before,
 ul ul ul ol > li:not(.task-list-item)::before {
-    content: "." counter(li);
+    content: counter(li) ".";
     color:  var(--accent-2);
-    font-weight:normal;
+    font-weight: normal;
     display: inline-block;
-    width: 1em;
-    margin-left: -1.5em;
+    margin-left: -2.5em;
     margin-right: 0.5em;
+    width: 2em;
     text-align: right;
-    direction: rtl;
     word-wrap: none;
     overflow: visible;
     word-break: keep-all;
