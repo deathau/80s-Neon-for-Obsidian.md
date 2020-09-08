@@ -243,6 +243,11 @@ ul ul ul ol > li:not(.task-list-item)::before {
     color: var(--accent-2);
 }
 
+/* fixes for buttons */
+button.mod-warning {
+    color: var(--text-normal);
+}
+
 /** BONUS! CRT Scanlines and flicker! 
   * It's not for everyone though, so it's disabled by default.
   * simply remove the `/*` below to enable it **/
