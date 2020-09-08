@@ -54,6 +54,15 @@
 .workspace-leaf.mod-active .workspace-leaf-header-title
 { color: var(--text-accent); }
 
+/* title bar */
+.top-titlebar {
+    background-color: var(--background-secondary-alt);
+}
+
+.top-titlebar-inner {
+    color: var(--text-faint);
+}
+
 /* Editor and preview */
 .cm-s-obsidian, .markdown-preview-view {
     --text-normal: rgba(255,220,255,0.8);
