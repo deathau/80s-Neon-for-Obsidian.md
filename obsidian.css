@@ -108,7 +108,9 @@
 .cm-s-obsidian span.cm-inline-code.cm-formatting-code,
 .cm-s-obsidian span.cm-formatting-code,
 .cm-s-obsidian span.cm-formatting-quote,
-.cm-s-obsidian span.cm-hr {
+.cm-s-obsidian span.cm-hr,
+.cm-s-obsidian pre.HyperMD-table-row span.cm-hmd-table-sep,
+.cm-s-obsidian pre.HyperMD-table-row-1>span {
     color: var(--accent-2);
 }
 
@@ -129,6 +131,20 @@ a.tag {
     color: var(--accent-1);
 }
 
+/* blockquotes, embeds, tables */
+.markdown-preview-view blockquote,
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed,
+.markdown-preview-view th,
+.markdown-preview-view td {
+    box-shadow: 0 0 0.25em var(--accent-2),
+        inset 0 0 0.25em var(--accent-2);
+}
+
+.markdown-preview-view hr {
+    box-shadow: 0 0 0.5em var(--accent-2);
+}
+
 /* code */
 .cm-s-obsidian span.cm-inline-code,
 code {
@@ -138,14 +154,12 @@ pre code {
     color: var(--text-normal);
 }
 
-
-
-
+/* strikethrough */
 .cm-strikethrough, s {
     text-decoration-color: var(--accent-1);
 }
 
-
+/* escape chars */
 .cm-s-obsidian span.cm-hmd-escape-backslash {
     color: var(--text-faint);
 }
@@ -153,14 +167,7 @@ pre code {
     color: var(--text-normal);
 }
 
-
-
-
-
-
-
 /* bullets and numbering */
-
 .cm-s-obsidian span.cm-formatting-list,
 .cm-s-obsidian span.cm-formatting-task {
     color: var(--text-accent); 
@@ -173,9 +180,9 @@ pre code {
 /* bullet lists */
 ul { list-style: none; }
 li > p {
-  display: inline-block;
-  margin-top: 0;
-  margin-bottom: 0;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 ul li:not(.task-list-item)::before {
