@@ -92,6 +92,23 @@
   color: var(--text-faint);
 }
 
+.titlebar-inner {
+  color: var(--text-faint);
+}
+
+.titlebar-button {
+  opacity: 1;
+}
+
+.titlebar-button:hover {
+  color: var(--text-muted);
+}
+
+.titlebar-button.mod-close:hover {
+  background-color: var(--accent-5);
+  color: var(--accent-2);
+}
+
 /* 3. Editor and preview */
 .cm-s-obsidian,
 .markdown-preview-view {
