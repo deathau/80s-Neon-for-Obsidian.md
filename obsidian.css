@@ -218,6 +218,14 @@ code {
   color: var(--accent-1);
 }
 
+.markdown-preview-view code {
+  color: var(--accent-1)
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock {
+  color: var(--accent-6-muted);
+}
+
 pre code {
   color: var(--text-normal);
 }
