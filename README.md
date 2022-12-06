@@ -3,6 +3,12 @@ A retro-future 80s inspired theme for [Obsidian](https://obsidian.md/), compatib
 ![Screenshot](./screenshot.jpg)
 
 ## Install
+
+Open Obsidian and go to `Preferences -> Appearance -> Themes -> click 'Manage'` and install from there.
+
+OR:
+
+
 1. Download obsidian.css to your Obsidian vault folder.
 2. In Obsidian, click Settings->Plugins and turn on "Custom CSS".
 3. There is no step 3! Enjoy!
