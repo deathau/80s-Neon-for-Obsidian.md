@@ -286,6 +286,12 @@ ul ul ul li:not(.task-list-item)::before {
   content: "▪"
 }
 
+/* Fix for embedded content - disable custom bullets in embeds */
+.markdown-embed-content ul li:not(.task-list-item)::before {
+  content: none;
+  display: none;
+}
+
 /* 3.9.2. Numbered lists */
 ol {
   list-style: none;
@@ -312,6 +318,12 @@ ul ul ul ol>li:not(.task-list-item)::before {
   overflow: visible;
   word-break: keep-all;
   text-shadow: 0 0 0.5em var(--accent-2);
+}
+
+/* Fix for embedded content - disable custom numbering in embeds */
+.markdown-embed-content ol>li:not(.task-list-item)::before {
+  content: none;
+  display: none;
 }
 
 /* 3.9.3. Task lists! (I'm proud of this, but could use improvement) */
