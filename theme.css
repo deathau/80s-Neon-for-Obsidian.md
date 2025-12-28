@@ -520,3 +520,60 @@ button.mod-warning {
   95% {text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;}
   100% {text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;}
 }
+/**/
+
+/* ========================================================================
+   RIBBON MENU EYE STRAIN FIX - Option 1: Dark Teal
+   Applied: 2025-12-18
+
+   Fixes harsh cyan/magenta color scheme in ribbon menu and modals
+   Maintains neon aesthetic while being easier on eyes
+   ======================================================================== */
+
+.theme-dark,
+.theme-light {
+  --interactive-normal: #006666;
+  --interactive-accent: #006666;
+  --accent-2: #006666;           /* Darkened cyan for backgrounds */
+  --accent-1-muted: #FF85D4;     /* Lighter magenta for better contrast */
+}
+
+.side-dock-ribbon-tab,
+.side-dock-ribbon-action {
+  color: #FF6EC7;
+  position: relative;
+  z-index: 101;  /* Ensure sidebar icons are above CRT overlay effects */
+}
+
+/* Fix for right sidebar icons specifically */
+.workspace-ribbon-right .side-dock-ribbon-tab,
+.workspace-ribbon-right .side-dock-ribbon-action {
+  position: relative;
+  z-index: 101;
+}
+
+/* Fix for mobile bottom navigation - keep icons bright and visible */
+.mobile-toolbar-option-container .clickable-icon,
+.mobile-toolbar .clickable-icon,
+.view-action,
+.mobile-navbar .clickable-icon {
+  color: #00FFFF !important;  /* Keep bright cyan for visibility */
+}
+
+/* ========================================================================
+   OPTIONAL: Disable CRT Effects if click issues persist
+
+   Uncomment the section below to disable scanlines, flicker, and text blur.
+   This will improve performance and eliminate any overlay-related click issues.
+   ======================================================================== */
+/*
+.app-container::before,
+.app-container::after {
+  display: none !important;
+}
+
+.app-container {
+  text-shadow: none !important;
+  animation: none !important;
+}
+*/
