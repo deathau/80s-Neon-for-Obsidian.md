@@ -1,4 +1,5 @@
 /***** Table of Contents ****/
+/* 0. Style Settings
 /* 1. Colours
 /* 2. General UI
 /*    2.1. Title bar
@@ -23,6 +24,28 @@
 /*    6.1. Pentile effect (chunky pixels)
 /*    6.2. Screen flicker
 /*    6.3. Text blur effect
+
+/* @settings
+
+name: 80's Neon Bonus Effects
+id: 80s-neon-bonus-effects
+settings:
+    -
+        id: pentile-80s-neon
+        title: Pentile effect (chunky pixels)
+        type: class-toggle
+        description: Adds a pentile effect to the screen to simulate old chunky pixel displays.
+    -
+        id: flicker-80s-neon
+        title: Screen flicker
+        type: class-toggle
+        description: Adds a screen flicker effect to simulate old CRT monitors.
+    -
+        id: text-blur-80s-neon
+        title: Text blur effect
+        type: class-toggle
+        description: Adds a text blur effect to simulate old CRT monitors.
+*/
 
 /* 1. Colours! Overriding both themes */
 .theme-dark,
@@ -413,11 +436,10 @@ button.mod-warning {
 
 /* 6. BONUS! CRT Scanlines and flicker! 
   * It's not for everyone though, so it's disabled by default.
-  * simply remove the `/*` below a subsection to enable it **/
+  * Use the [Style Settings](obsidian://show-plugin?id=obsidian-style-settings) plugin to enable these effects **/
 
 /* 6.1. Pentile effect (chunky pixels) */
-/* DELETE THIS LINE TO ENABLE
-.app-container::before {
+.pentile-80s-neon::before {
   content: " ";
   display: block;
   position: absolute;
@@ -426,14 +448,13 @@ button.mod-warning {
   bottom: 0;
   right: 0;
   background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 2;
+  z-index: 100;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
 }
 
 /* 6.2. Screen flicker */
-/* DELETE THIS LINE TO ENABLE
-.app-container::after {
+.flicker-80s-neon::after {
   content: " ";
   display: block;
   position: absolute;
@@ -472,8 +493,7 @@ button.mod-warning {
 }
 
 /* 6.3. Text blur effect */
-/* DELETE THIS LINE TO ENABLE
-.app-container {
+.text-blur-80s-neon {
   text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
   animation: textShadow 1.6s infinite;
 }
@@ -500,4 +520,3 @@ button.mod-warning {
   95% {text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;}
   100% {text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;}
 }
-/**/
