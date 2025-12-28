@@ -286,6 +286,12 @@ ul ul ul li:not(.task-list-item)::before {
   content: "▪"
 }
 
+/* Fix for embedded content - disable custom bullets in embeds */
+.markdown-embed-content ul li:not(.task-list-item)::before {
+  content: none;
+  display: none;
+}
+
 /* 3.9.2. Numbered lists */
 ol {
   list-style: none;
@@ -314,6 +320,12 @@ ul ul ul ol>li:not(.task-list-item)::before {
   text-shadow: 0 0 0.5em var(--accent-2);
 }
 
+/* Fix for embedded content - disable custom numbering in embeds */
+.markdown-embed-content ol>li:not(.task-list-item)::before {
+  content: none;
+  display: none;
+}
+
 /* 3.9.3. Task lists! (I'm proud of this, but could use improvement) */
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
@@ -323,7 +335,7 @@ ul ul ul ol>li:not(.task-list-item)::before {
   width: 1.25em;
   height: 1.25em;
   margin: 0;
-  margin-right: 0.5em;
+  margin-inline-end: 0.5em;
   box-shadow: 0 0 0.5em var(--accent-2);
 }
 
